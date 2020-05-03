@@ -4,7 +4,7 @@ Small service to restart telegraf on modification of config file.
 
 ## Installation
 
-Installation requires `wget` and assumes both `telegraf` and `rust` are already installed on your machine.
+Installation requires `wget` and assumes both `telegraf` and [`Rust`](https://www.rust-lang.org/tools/install) are already installed on your machine.
 
 ```
 wget https://github.com/mikemahoney218/pi-admin/raw/master/telegraf-watcher/target/debian/telegraf-watcher_0.1.2_armhf.deb && \
