@@ -2,23 +2,14 @@
 
 Small service to restart telegraf on modification of config file.
 
-## systemd config
+## Installation
+
+Installation requires `wget` and assumes both `telegraf` and `rust` are already installed on your machine.
 
 ```
-[Unit]
-Description=Telegraf watcher service
-ConditionPathExists=/usr/bin/telegraf-watcher
-After=telegraf.service
-
-[Service]
-Type=simple
-
-Restart=always
-RestartSec=3
-StartLimitIntervalSec=60
-
-ExecStart=/usr/bin/telegraf-watcher
-
-[Install]
-WantedBy=multi-user.target
+wget https://github.com/mikemahoney218/pi-admin/raw/master/telegraf-watcher/target/debian/telegraf-watcher_0.1.2_armhf.deb && \
+    sudo dpkg -i telegraf-watcher_0.1.2_armhf.deb && \
+    sudo wget https://raw.githubusercontent.com/mikemahoney218/pi-admin/master/telegraf-watcher/telegraf-watcher.service -O /lib/sysstemd/system/telegraf-watcher.service && \
+    sudo systemctl daemon-reload && \
+    sudo systemctl enable --now telegraf-watcher
 ```
