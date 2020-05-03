@@ -19,12 +19,8 @@ fn main() {
         .expect("Failed to add file watch");
 
         let mut buffer = [0; 1024];
-        let events = inotify.read_events_blocking(&mut buffer)
+        let _events = inotify.read_events_blocking(&mut buffer)
         .expect("Error while reading events");
-
-        for event in events {
-            println!("{:?}", event)
-        }
 
         let _output = Command::new("sh")
                                  .arg("-c")
