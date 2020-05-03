@@ -9,7 +9,7 @@ Installation requires `wget` and assumes both `telegraf` and `rust` are already 
 ```
 wget https://github.com/mikemahoney218/pi-admin/raw/master/telegraf-watcher/target/debian/telegraf-watcher_0.1.2_armhf.deb && \
     sudo dpkg -i telegraf-watcher_0.1.2_armhf.deb && \
-    sudo wget https://raw.githubusercontent.com/mikemahoney218/pi-admin/master/telegraf-watcher/telegraf-watcher.service -O /lib/sysstemd/system/telegraf-watcher.service && \
+    sudo wget https://raw.githubusercontent.com/mikemahoney218/pi-admin/master/telegraf-watcher/telegraf-watcher.service -O /lib/systemd/system/telegraf-watcher.service && \
     sudo systemctl daemon-reload && \
     sudo systemctl enable --now telegraf-watcher
 ```
