@@ -1,8 +1,12 @@
 [package]
 name = "telegraf-watcher"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Mike Mahoney <mike.mahoney.218@gmail.com>"]
 edition = "2018"
+description = "Microservice to restart telegraf on configuration update"
+readme = "README.md"
+repository = "github.com/mikemahoney218/pi-admin/telegraf-watcher"
+license = "MIT"
 
 [dependencies]
 inotify = "0.8.2"
