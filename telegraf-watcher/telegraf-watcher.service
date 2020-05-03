@@ -1,10 +1,3 @@
-# Telegraf Watcher
-
-Small service to restart telegraf on modification of config file.
-
-## systemd config
-
-```
 [Unit]
 Description=Telegraf watcher service
 ConditionPathExists=/usr/bin/telegraf-watcher
@@ -21,4 +14,3 @@ ExecStart=/usr/bin/telegraf-watcher
 
 [Install]
 WantedBy=multi-user.target
-```

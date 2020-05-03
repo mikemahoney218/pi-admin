@@ -7,6 +7,7 @@ description = "Microservice to restart telegraf on configuration update"
 readme = "README.md"
 repository = "github.com/mikemahoney218/pi-admin/telegraf-watcher"
 license = "MIT"
+exclude = ["telegraf-watcher.service"]
 
 [dependencies]
 inotify = "0.8.2"
