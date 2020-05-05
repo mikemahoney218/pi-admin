@@ -1,6 +1,6 @@
 [package]
 name = "telegraf-watcher"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["Mike Mahoney <mike.mahoney.218@gmail.com>"]
 edition = "2018"
 description = "Microservice to restart telegraf on configuration update"
@@ -11,3 +11,5 @@ exclude = ["telegraf-watcher.service"]
 
 [dependencies]
 inotify = "0.8.2"
+log = "0.4"
+simple_logger = "1.6.0"
