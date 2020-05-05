@@ -18,6 +18,8 @@ fn main() {
                           panic!("{:?}", error);
                         });
 
+    info!("inotify watcher initialized.");
+
     loop {
 
         inotify
@@ -30,12 +32,18 @@ fn main() {
             panic!("{:?}", error);
         });
 
+        info!("File added to watcher.");
+
         let mut buffer = [0; 1024];
-        let _events = inotify.read_events_blocking(&mut buffer)
+        let events = inotify.read_events_blocking(&mut buffer)
         .unwrap_or_else(|error| {
             error!("{:?}", error);
             panic!("{:?}", error);
         });
+
+        for event in events {
+            info!("{:?}", event);
+        }
 
         let _output = Command::new("sh")
                                  .arg("-c")
