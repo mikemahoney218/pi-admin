@@ -10,7 +10,7 @@ use std::sync::mpsc::channel;
 use std::time::Duration;
 use std::process::Command;
 use std::string::String;
-use log::{info, error};
+use log::{info, warn, error};
 use config::*;
 use glob::glob;
 use bimap::BiMap;
@@ -51,8 +51,6 @@ fn main() {
                     let mut command_str: String = "systemctl restart ".to_owned();
                     command_str.push_str(restart_me);
 
-                    
-
                     let _output = Command::new("sh")
                                  .arg("-c")
                                  .arg(command_str)
@@ -63,7 +61,7 @@ fn main() {
                                   });
                 }
             },
-            Err(e) => println!("watch error: {:?}", e),
+            Err(e) => warn!("Watch error: {:?}", e),
          }
 
     }
