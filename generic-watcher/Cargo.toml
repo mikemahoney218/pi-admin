@@ -1,0 +1,13 @@
+[package]
+name = "config-watcher"
+version = "0.1.0"
+authors = ["Mike Mahoney <mike.mahoney.218@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+config = "0.10"
+glob = "0.3"
+bimap = { version = "0.4", features = [ "serde" ]}
+notify = "4.0"
+log = "0.4"
+simple_logger = "1.6"
