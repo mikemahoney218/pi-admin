@@ -1,8 +1,13 @@
 [package]
-name = "config-watcher"
+name = "generic-watcher"
 version = "0.1.0"
 authors = ["Mike Mahoney <mike.mahoney.218@gmail.com>"]
 edition = "2018"
+description = "Microservice to restart services on configuration update"
+readme = "README.md"
+repository = "github.com/mikemahoney218/pi-admin/generic-watcher"
+license = "MIT"
+exclude = ["generic-watcher.service"]
 
 [dependencies]
 config = "0.10"
