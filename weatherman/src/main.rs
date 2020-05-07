@@ -65,7 +65,7 @@ fn main() -> Result<(), Error> {
             short_forecast: period["shortForecast"].to_string(),
             detailed_forecast: period["detailedForecast"].to_string()
           };
-          println!("weatherForecast,number={},isDaytime={},tempUnit={} name={},startTime={},endTime={},temperature={},tempTrend={},windSpeed={},windDirection={},icon={},shortForecast={},detailedForecast={} {}", 
+          println!("weatherForecast,number={},isDaytime={},tempUnit={} name={:?},startTime={},endTime={},temperature={},tempTrend={:?},windSpeed={},windDirection={:?},icon={:?},shortForecast={:?},detailedForecast={:?} {}", 
                    experimental_period.number,
                    experimental_period.is_daytime,
                    experimental_period.temperature_unit,
