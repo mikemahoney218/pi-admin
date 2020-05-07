@@ -11,6 +11,7 @@ at `/etc/generic-watcher/generic-watcher.toml` in the format
 wget https://github.com/mikemahoney218/pi-admin/raw/master/generic-watcher/target/debian/generic-watcher_0.1.0_armhf.deb && \
     sudo dpkg -i generic-watcher_0.1.0_armhf.deb && \
     sudo wget https://raw.githubusercontent.com/mikemahoney218/pi-admin/master/generic-watcher/generic-watcher.service -O /lib/systemd/system/generic-watcher.service && \
+    echo "generic-watcher = '/etc/generic-watcher/generic-watcher.toml' > /etc/generic-watcher/generic-watcher.toml" && \
     sudo systemctl daemon-reload && \
     sudo systemctl enable --now generic-watcher
 ```

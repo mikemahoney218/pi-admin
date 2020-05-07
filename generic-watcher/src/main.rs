@@ -17,7 +17,7 @@ use bimap::BiMap;
 
 fn main() {
     simple_logger::init().unwrap();
-    info!("Telegraf watcher service initialized.");
+    info!("Generic watcher service initialized.");
 
     let (tx, rx) = channel();
     let mut watcher = watcher(tx, Duration::from_millis(500)).unwrap();
